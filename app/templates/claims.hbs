@@ -1,0 +1,11 @@
+  <h2>List of Claims</h2>
+
+  {{#list-filter
+     filter=(action 'filterByPolicy')
+     as |claims|}}
+    <ul class="results">
+      {{#each claims as |claimUnit|}}
+        <li>{{claim-listing claim=claimUnit}}</li>
+      {{/each}}
+    </ul>
+  {{/list-filter}}
